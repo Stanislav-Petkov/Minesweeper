@@ -27,6 +27,7 @@ class Minesweeper {
 
     //Shows and empty the board, when the game starts
     void showEmptyBoard() {
+        printer.printCurrentStatusMessage();
         System.out.print("  ");
         for (int i = 1; i <= size; i++) {
             System.out.print(i + " ");
@@ -178,6 +179,7 @@ class Minesweeper {
 
     // Shows the board of the game
     private void showBoard() {
+        printer.printCurrentStatusMessage();
         if (checkIfGameIsOver()) {
             printRevealedCellsWhenTheGameIsOver();
             lost = true;

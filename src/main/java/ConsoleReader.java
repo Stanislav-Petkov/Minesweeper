@@ -4,6 +4,7 @@ import java.util.Scanner;
  * This class is used to read the input of the user from the console
  */
 public class ConsoleReader {
+    private ConsolePrinter printer;
     private Scanner scanner;
     private int gameLevel;
     private int numberOfMines;
@@ -14,6 +15,7 @@ public class ConsoleReader {
 
     public ConsoleReader() {
         scanner = new Scanner(System.in);
+        printer = new ConsolePrinter();
     }
 
     public void readGameLevelInput() {
@@ -56,6 +58,7 @@ public class ConsoleReader {
     }
 
     public void readRowAndCow() {
+        printer.printEnterYourMoveMessage();
         String[] inputValue = scanner.nextLine().split("\\s+");
         inputRow = Integer.parseInt(inputValue[0]);
         inputCol = Integer.parseInt(inputValue[1]);

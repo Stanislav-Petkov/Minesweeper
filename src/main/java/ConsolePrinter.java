@@ -18,4 +18,13 @@ public class ConsolePrinter {
         System.out.println("You lost!");
     }
 
+    public void printCurrentStatusMessage(){
+        System.out.println("Current Status of Board :");
+    }
+
+    public void printEnterYourMoveMessage(){
+        System.out.println();
+        System.out.println("Enter your move, (row, column)");
+        System.out.print("-> ");
+    }
 }
